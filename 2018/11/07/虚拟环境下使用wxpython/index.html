@@ -79,14 +79,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="问题 Mac下Python虚拟环境下运行运行wxpython脚本，会报以下错误，无法运行脚本      解决方案 virtualenv/bin文件夹下创建sh文件(pythonw.sh)，内容为   sh脚本中，PYTHON为本机python位置  Pycharm中配置如下    参考 https://wiki.wxpython.org/wxPythonVirtualenvOnMac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac虚拟环境下使用wxpython">
+<meta property="og:url" content="http://yoursite.com/2018/11/07/虚拟环境下使用wxpython/index.html">
 <meta property="og:site_name" content="巽&#39;s 部落格">
+<meta property="og:description" content="问题 Mac下Python虚拟环境下运行运行wxpython脚本，会报以下错误，无法运行脚本      解决方案 virtualenv/bin文件夹下创建sh文件(pythonw.sh)，内容为   sh脚本中，PYTHON为本机python位置  Pycharm中配置如下    参考 https://wiki.wxpython.org/wxPythonVirtualenvOnMac">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-30T09:11:39.000Z">
+<meta property="og:image" content="https://i.imgur.com/ZOu0UqQ.png">
+<meta property="og:image" content="https://i.imgur.com/NTbny5q.png">
+<meta property="og:updated_time" content="2018-11-07T08:59:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="Mac虚拟环境下使用wxpython">
+<meta name="twitter:description" content="问题 Mac下Python虚拟环境下运行运行wxpython脚本，会报以下错误，无法运行脚本      解决方案 virtualenv/bin文件夹下创建sh文件(pythonw.sh)，内容为   sh脚本中，PYTHON为本机python位置  Pycharm中配置如下    参考 https://wiki.wxpython.org/wxPythonVirtualenvOnMac">
+<meta name="twitter:image" content="https://i.imgur.com/ZOu0UqQ.png">
 
 
 
@@ -116,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/07/虚拟环境下使用wxpython/">
 
 
 
 
 
-  <title>categories | 巽's 部落格</title>
+  <title>Mac虚拟环境下使用wxpython | 巽's 部落格</title>
   
 
 
@@ -217,40 +223,165 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/07/虚拟环境下使用wxpython/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Schun Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="巽's 部落格">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                No categories
-            </div>
-            <div class="category-all">
+          <h1 class="post-title" itemprop="name headline">Mac虚拟环境下使用wxpython</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
-            </div>
-          </div>
-        
-      </div>
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-07T16:10:43+08:00">
+                2018-11-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/07/虚拟环境下使用wxpython/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/11/07/虚拟环境下使用wxpython/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ul>
+<li><p>Mac下Python虚拟环境下运行运行wxpython脚本，会报以下错误，无法运行脚本</p>
+<p>  <img src="https://i.imgur.com/ZOu0UqQ.png" alt=""></p>
+</li>
+</ul>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
+<li><p>virtualenv/bin文件夹下创建sh文件(pythonw.sh)，内容为</p>
+<script src="https://gist.github.com/schunlee/909168d2526e62b32017967d056ee94b.js"></script>
+</li>
+<li><p>sh脚本中，<code>PYTHON</code>为本机python位置</p>
+</li>
+<li><p>Pycharm中配置如下</p>
+<p><img src="https://i.imgur.com/NTbny5q.png" alt=""></p>
+</li>
+</ul>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ul>
+<li><a href="https://wiki.wxpython.org/wxPythonVirtualenvOnMac" target="_blank" rel="noopener">https://wiki.wxpython.org/wxPythonVirtualenvOnMac</a></li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/01/google-spreadsheet-tips/" rel="next" title="google_spreadsheet_tips">
+                <i class="fa fa-chevron-left"></i> google_spreadsheet_tips
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -290,8 +421,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -355,6 +495,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
