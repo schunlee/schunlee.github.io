@@ -300,29 +300,31 @@
       
         
           
-            <h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ul>
-<li><p>Mac下Python虚拟环境运行wxpython脚本，会报以下错误，无法运行脚本</p>
-<p>  <img src="https://i.imgur.com/ZOu0UqQ.png" alt=""></p>
-</li>
-</ul>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><ul>
-<li><p>virtualenv/bin文件夹下创建sh文件(pythonw.sh)，内容为</p>
-<script src="https://gist.github.com/schunlee/909168d2526e62b32017967d056ee94b.js"></script>
-</li>
-<li><p>sh脚本中，<code>PYTHON</code>为本机python位置</p>
-</li>
-<li><p>Pycharm中配置如下</p>
-<p><img src="https://i.imgur.com/NTbny5q.png" alt=""></p>
-</li>
-</ul>
-<h4 id="Pip"><a href="#Pip" class="headerlink" title="Pip"></a>Pip</h4><ul>
-<li>wxPython-Phoenix==3.0.3.dev2902+a79cd32</li>
-</ul>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ul>
-<li><a href="https://wiki.wxpython.org/wxPythonVirtualenvOnMac" target="_blank" rel="noopener">https://wiki.wxpython.org/wxPythonVirtualenvOnMac</a></li>
-</ul>
+          问题
+Mac下Python虚拟环境运行wxpython脚本，会报以下错误，无法运行脚本
+  
 
-          
+
+解决方案
+virtualenv/bin文件夹下创建sh文件(pythonw.sh)，内容为
+
+
+sh脚本中，PYTHON为本机python位置
+
+Pycharm中配置如下
+
+
+
+Pip
+wxPython
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/07/虚拟环境下使用wxpython/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -440,25 +442,16 @@
       
         
           
-            <h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ul>
-<li><p>when export BigQuery SQL result to Google Spreadsheet (adunit hyperlink as one field in it), find all hyperlinks don’t work on newly auto created Spreadsheet, cannot click and redirect, an apostrophe ahead of every hyperlink text. With function REGEXREPLACE to replace the head apostrophe, and paste the value, the hyperlink still not work.</p>
-<p>  <a href="https://i.imgur.com/4lREnao.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/4lREnao.png)"></a></p>
-</li>
-<li><p>fortunately, with Spreadsheet API to rewrite the spreadsheet can solve above bug. So here use Google Apps Script to refresh the data.(seeing spreadsheet_tool.gs)</p>
-<ul>
-<li>Menu -&gt; Tools -&gt; Script editor -&gt; paste spreadsheet_tool.gs -&gt; Save -&gt; Run the Script -&gt; Authorize via browser</li>
-<li><p>then you will see Menu -&gt; Custom Tools -&gt; Refresh Current Sheet, choose to click</p>
-<p><a href="https://i.imgur.com/OgUrfTe.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/OgUrfTe.png)"></a></p>
-<p><a href="https://i.imgur.com/1ZMc6Ph.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/1ZMc6Ph.png)"></a></p>
-<p><a href="https://i.imgur.com/4lREnao.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/4lREnao.png)"></a></p>
-<p><a href="https://i.imgur.com/lUdRQmR.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/lUdRQmR.png)"></a></p>
-</li>
-</ul>
-<script src="https://gist.github.com/schunlee/7fbff5eddbd4464614f0d9c0fd92ad70.js"></script>
-</li>
-</ul>
-
-          
+          Tips
+when export BigQuery SQL result to Google Spreadsheet (adunit hyperlink as one field in it), find all hyperlinks don’t work on newly auto created
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/11/01/google-spreadsheet-tips/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -576,15 +569,18 @@
       
         
           
-            <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li><p>今天通过Pycharm git pull代码时，突然遇到以下错误提示：</p>
-<p><a href="https://i.imgur.com/IuujM4E.png" target="_blank" rel="noopener"><img src="https://i.imgur.com/IuujM4E.png"></a></p>
-<p>刚开始以为是网络问题，但重新克隆的项目同样无法远程仓库拉代码，于是怀疑可能是IDE配置问题，果不其然，查询 <a href="https://stackoverflow.com/questions/27566999/git-with-intellij-idea-could-not-read-from-remote-repository" target="_blank" rel="noopener">stackoverflow</a>，原来是自己不小心将项目版本控制SSH设置为内建Built-in的了(正确需要设置为<span color="red">Native</span>)，自然因为权限问题无法访问Github仓库。</p>
-<p><a href="https://i.imgur.com/VBCuVbW.png" target="_blank" rel="noopener"><img src="https://i.imgur.com/VBCuVbW.png"></a></p>
-</li>
-</ul>
+          注意事项
+今天通过Pycharm git pull代码时，突然遇到以下错误提示：
 
-          
+刚开始以为是网络问题，但重新克隆的项目同样无法远程仓库拉代码，于是怀疑可能是IDE配置问题，果不其然，查询 stackoverflow，原来是自己不小心将项目版本控制SSH设置为内建Built-in的了(正确需要设置
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/31/Pycharm使用注意/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -702,21 +698,24 @@
       
         
           
-            <h3 id="技术博客"><a href="#技术博客" class="headerlink" title="技术博客"></a>技术博客</h3><ul>
-<li><a href="https://yizeng.me/blog/categories/" target="_blank" rel="noopener">Yi Zeng, a software engineer based in Christchurch, New Zealand</a></li>
-<li><a href="https://ephrain.net/" target="_blank" rel="noopener">ephrain.net</a></li>
-<li><a href="https://huoding.com/" target="_blank" rel="noopener">火丁笔记</a></li>
-<li><a href="http://toddhayton.com/" target="_blank" rel="noopener">Todd Hayton, Freelance Software Developer</a></li>
-<li><a href="https://blog.kliy.es/" target="_blank" rel="noopener">敬洋</a></li>
-<li><a href="https://www.leavesongs.com/" target="_blank" rel="noopener">离别歌</a></li>
-<li><a href="https://zhile.io/2018/08/17/jetbrains-license-server-crack.html#more" target="_blank" rel="noopener">破解Jetbrains</a></li>
-</ul>
-<h3 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h3><ul>
-<li><a href="http://yshblog.com/blog/" target="_blank" rel="noopener">杨仕航的博客 - Django</a></li>
-<li><a href="https://vincenttide.com/" target="_blank" rel="noopener">Django Channels and Celery Example</a></li>
-</ul>
+          技术博客
+Yi Zeng, a software engineer based in Christchurch, New Zealand
+ephrain.net
+火丁笔记
+Todd Hayton, Freelance Software Developer
+敬洋
+离别歌
+破解Jetbrains
 
-          
+教程
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/30/收藏夹/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -834,20 +833,20 @@
       
         
           
-            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><ul>
-<li>第一次搭建Hexo+NexT博客，以此来整理并分享技术点滴。虽然网上已有了不少教程，但亲自动手还是遇到不少问题。</li>
-</ul>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>themes目录下git clone NexT主题，不注意会多生成一个themes文件夹导致报错。next文件夹应该与hexo默认生成的landscape同级。<br><img src="https://i.imgur.com/0m202K4.png" alt=""></li>
-<li>在部署站点时，_config.yml，各配置项冒号后需保留一个空格，否则不能成功部署(不会有报错信息)。</li>
-<li><pre><code>deploy:
-   type: git
-   repo: git@github.com:schunlee/schunlee.github.io.git
-   branch: master
-</code></pre></li>
-</ul>
+          前言
+第一次搭建Hexo+NexT博客，以此来整理并分享技术点滴。虽然网上已有了不少教程，但亲自动手还是遇到不少问题。
 
-          
+注意事项
+themes目录下git clone NexT主题，不注意会多生成一个themes文件夹导致报错。next文件夹应该与hexo默认生成的landscape同级。
+在部署
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/22/博客搭建/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
