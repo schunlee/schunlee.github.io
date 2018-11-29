@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="前言  之前写过一个获取公司github上各项目仓库使用外链情况的脚本，每条信息以append方式写入csv文件，再上传BigQuery。脚本是在Mac上开发的，一切正常，后来迁移至Windows PC发现表格中多了很多的空行。 代码  解决  通过参考 https://www.crifan.com/python_csv_writer_writerow_redundant_new_line/，cs">
+<meta name="description" content="问题  之前写过一个获取公司github上各项目仓库使用外链情况的脚本，每条信息以append方式写入csv文件，再上传BigQuery。脚本是在Mac上开发的，一切正常，后来迁移至Windows PC发现表格中多了很多的空行。 代码  解决方案  通过参考 https://www.crifan.com/python_csv_writer_writerow_redundant_new_line/，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="csv的坑">
 <meta property="og:url" content="http://yoursite.com/2018/11/29/csv的坑/index.html">
 <meta property="og:site_name" content="巽&#39;s 部落格">
-<meta property="og:description" content="前言  之前写过一个获取公司github上各项目仓库使用外链情况的脚本，每条信息以append方式写入csv文件，再上传BigQuery。脚本是在Mac上开发的，一切正常，后来迁移至Windows PC发现表格中多了很多的空行。 代码  解决  通过参考 https://www.crifan.com/python_csv_writer_writerow_redundant_new_line/，cs">
+<meta property="og:description" content="问题  之前写过一个获取公司github上各项目仓库使用外链情况的脚本，每条信息以append方式写入csv文件，再上传BigQuery。脚本是在Mac上开发的，一切正常，后来迁移至Windows PC发现表格中多了很多的空行。 代码  解决方案  通过参考 https://www.crifan.com/python_csv_writer_writerow_redundant_new_line/，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-29T03:49:03.000Z">
+<meta property="og:updated_time" content="2018-11-29T03:50:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="csv的坑">
-<meta name="twitter:description" content="前言  之前写过一个获取公司github上各项目仓库使用外链情况的脚本，每条信息以append方式写入csv文件，再上传BigQuery。脚本是在Mac上开发的，一切正常，后来迁移至Windows PC发现表格中多了很多的空行。 代码  解决  通过参考 https://www.crifan.com/python_csv_writer_writerow_redundant_new_line/，cs">
+<meta name="twitter:description" content="问题  之前写过一个获取公司github上各项目仓库使用外链情况的脚本，每条信息以append方式写入csv文件，再上传BigQuery。脚本是在Mac上开发的，一切正常，后来迁移至Windows PC发现表格中多了很多的空行。 代码  解决方案  通过参考 https://www.crifan.com/python_csv_writer_writerow_redundant_new_line/，">
 
 
 
@@ -309,10 +309,10 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>  之前写过一个获取公司github上各项目仓库使用外链情况的脚本，每条信息以append方式写入csv文件，再上传BigQuery。脚本是在Mac上开发的，一切正常，后来迁移至Windows PC发现表格中多了很多的空行。</p>
+        <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>  之前写过一个获取公司github上各项目仓库使用外链情况的脚本，每条信息以append方式写入csv文件，再上传BigQuery。脚本是在Mac上开发的，一切正常，后来迁移至Windows PC发现表格中多了很多的空行。</p>
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><script src="https://gist.github.com/schunlee/562425c307c6e977d5391e59ee084343.js"></script>
 
-<h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>  通过参考 <a href="https://www.crifan.com/python_csv_writer_writerow_redundant_new_line/" target="_blank" rel="noopener">https://www.crifan.com/python_csv_writer_writerow_redundant_new_line/</a>，csv的writer，打开文件时需要小心，要通过binary模式打开，而不能通过文本模式，否则使用writerows写内容到csv时，会产生多余的CR，导致多余的空行。<br>  <script src="https://gist.github.com/schunlee/818486f0e26deb06a654842e33eae271.js"></script></p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>  通过参考 <a href="https://www.crifan.com/python_csv_writer_writerow_redundant_new_line/" target="_blank" rel="noopener">https://www.crifan.com/python_csv_writer_writerow_redundant_new_line/</a>，csv的writer，打开文件时需要小心，要通过binary模式打开，而不能通过文本模式，否则使用writerows写内容到csv时，会产生多余的CR，导致多余的空行。<br>  <script src="https://gist.github.com/schunlee/818486f0e26deb06a654842e33eae271.js"></script></p>
 
       
     </div>
@@ -488,7 +488,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决"><span class="nav-number">3.</span> <span class="nav-text">解决</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案"><span class="nav-number">3.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
             
 
           </div>
