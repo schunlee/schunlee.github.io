@@ -87,23 +87,24 @@
 
 
 
-<meta name="description" content="Tips when export BigQuery SQL result to Google Spreadsheet (adunit hyperlink as one field in it), find all hyperlinks don’t work on newly auto created Spreadsheet, cannot click and redirect, an apostr">
+<meta name="description" content="问题由于跑脚本的GCE VM instance低配的g1-small，内存只有1.7GB，定时任务总是由于MemoryError被Kill掉  Error:   方案 添加虚拟内存 参考 Linux下如何添加虚拟内存  fdisk -l和df -Th命令来查看硬盘信息和挂载信息，来确定分区的大小    使用dd命令，来创建大小为2G的文件swapfile dd if=/dev/zero of=/m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="google_spreadsheet_tips">
-<meta property="og:url" content="http://yoursite.com/2018/11/01/google-spreadsheet-tips/index.html">
+<meta property="og:title" content="MemoryError问题">
+<meta property="og:url" content="http://yoursite.com/2019/03/06/MemoryError问题/index.html">
 <meta property="og:site_name" content="巽&#39;s 部落格">
-<meta property="og:description" content="Tips when export BigQuery SQL result to Google Spreadsheet (adunit hyperlink as one field in it), find all hyperlinks don’t work on newly auto created Spreadsheet, cannot click and redirect, an apostr">
+<meta property="og:description" content="问题由于跑脚本的GCE VM instance低配的g1-small，内存只有1.7GB，定时任务总是由于MemoryError被Kill掉  Error:   方案 添加虚拟内存 参考 Linux下如何添加虚拟内存  fdisk -l和df -Th命令来查看硬盘信息和挂载信息，来确定分区的大小    使用dd命令，来创建大小为2G的文件swapfile dd if=/dev/zero of=/m">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://i.imgur.com/4lREnao.png)">
-<meta property="og:image" content="https://i.imgur.com/OgUrfTe.png)">
-<meta property="og:image" content="https://i.imgur.com/1ZMc6Ph.png)">
-<meta property="og:image" content="https://i.imgur.com/4lREnao.png)">
-<meta property="og:image" content="https://i.imgur.com/lUdRQmR.png)">
-<meta property="og:updated_time" content="2018-11-01T09:26:39.000Z">
+<meta property="og:image" content="https://i.imgur.com/35MbUxg.png)">
+<meta property="og:image" content="https://i.imgur.com/RWAtZmc.png)">
+<meta property="og:image" content="https://i.imgur.com/HU6PjI9.png)">
+<meta property="og:image" content="https://i.imgur.com/hG8HMVp.png)">
+<meta property="og:image" content="https://i.imgur.com/iQq9qbO.png)">
+<meta property="og:image" content="https://i.imgur.com/BsbeB9R.png)">
+<meta property="og:updated_time" content="2019-03-06T02:07:09.143Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="google_spreadsheet_tips">
-<meta name="twitter:description" content="Tips when export BigQuery SQL result to Google Spreadsheet (adunit hyperlink as one field in it), find all hyperlinks don’t work on newly auto created Spreadsheet, cannot click and redirect, an apostr">
-<meta name="twitter:image" content="https://i.imgur.com/4lREnao.png)">
+<meta name="twitter:title" content="MemoryError问题">
+<meta name="twitter:description" content="问题由于跑脚本的GCE VM instance低配的g1-small，内存只有1.7GB，定时任务总是由于MemoryError被Kill掉  Error:   方案 添加虚拟内存 参考 Linux下如何添加虚拟内存  fdisk -l和df -Th命令来查看硬盘信息和挂载信息，来确定分区的大小    使用dd命令，来创建大小为2G的文件swapfile dd if=/dev/zero of=/m">
+<meta name="twitter:image" content="https://i.imgur.com/35MbUxg.png)">
 
 
 
@@ -133,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/01/google-spreadsheet-tips/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/06/MemoryError问题/">
 
 
 
 
 
-  <title>google_spreadsheet_tips | 巽's 部落格</title>
+  <title>MemoryError问题 | 巽's 部落格</title>
   
 
 
@@ -246,7 +247,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/01/google-spreadsheet-tips/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/06/MemoryError问题/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Schun Lee">
@@ -263,7 +264,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">google_spreadsheet_tips</h1>
+          <h1 class="post-title" itemprop="name headline">MemoryError问题</h1>
         
 
         <div class="post-meta">
@@ -275,8 +276,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-01T17:19:19+08:00">
-                2018-11-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-06T09:24:10+08:00">
+                2019-03-06
               </time>
             
 
@@ -313,21 +314,31 @@
       
 
       
-        <h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h3><ul>
-<li><p>when export BigQuery SQL result to Google Spreadsheet (adunit hyperlink as one field in it), find all hyperlinks don’t work on newly auto created Spreadsheet, cannot click and redirect, an apostrophe ahead of every hyperlink text. With function REGEXREPLACE to replace the head apostrophe, and paste the value, the hyperlink still not work.</p>
-<p>  <a href="https://i.imgur.com/4lREnao.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/4lREnao.png)"></a></p>
-</li>
-<li><p>fortunately, with Spreadsheet API to rewrite the spreadsheet can solve above bug. So here use Google Apps Script to refresh the data.(seeing spreadsheet_tool.gs)</p>
+        <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>由于跑脚本的GCE VM instance低配的g1-small，内存只有1.7GB，定时任务总是由于MemoryError被Kill掉</p>
+<p><a href="https://i.imgur.com/35MbUxg.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/35MbUxg.png)"></a></p>
+<p>Error:</p>
+<p><a href="https://i.imgur.com/RWAtZmc.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/RWAtZmc.png)"></a></p>
+<p><a href="https://i.imgur.com/HU6PjI9.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/HU6PjI9.png)"></a></p>
+<h3 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h3><ul>
+<li><p>添加虚拟内存</p>
+<p>参考 <a href="http://www.lining0806.com/linux%E4%B8%8B%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98/" target="_blank" rel="noopener">Linux下如何添加虚拟内存</a></p>
 <ul>
-<li>Menu -&gt; Tools -&gt; Script editor -&gt; paste spreadsheet_tool.gs -&gt; Save -&gt; Run the Script -&gt; Authorize via browser</li>
-<li><p>then you will see Menu -&gt; Custom Tools -&gt; Refresh Current Sheet, choose to click</p>
-<p><a href="https://i.imgur.com/OgUrfTe.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/OgUrfTe.png)"></a></p>
-<p><a href="https://i.imgur.com/1ZMc6Ph.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/1ZMc6Ph.png)"></a></p>
-<p><a href="https://i.imgur.com/4lREnao.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/4lREnao.png)"></a></p>
-<p><a href="https://i.imgur.com/lUdRQmR.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/lUdRQmR.png)"></a></p>
+<li><p>fdisk -l和df -Th命令来查看硬盘信息和挂载信息，来确定分区的大小</p>
+<p><a href="https://i.imgur.com/hG8HMVp.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/hG8HMVp.png)"></a></p>
+<p><a href="https://i.imgur.com/iQq9qbO.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/iQq9qbO.png)"></a></p>
+</li>
+<li><p>使用dd命令，来创建大小为2G的文件swapfile</p>
+<pre><code>dd if=/dev/zero of=/mnt/swapfile bs=1M count=2048
+</code></pre></li>
+<li><p>格式化交换文件</p>
+<pre><code>mkswap /mnt/swapfile
+</code></pre></li>
+<li><p>挂载交换文件</p>
+<pre><code>swapon /mnt/swapfile
+</code></pre></li>
+<li><p><a href="https://i.imgur.com/BsbeB9R.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/BsbeB9R.png)"></a></p>
 </li>
 </ul>
-<script src="https://gist.github.com/schunlee/7fbff5eddbd4464614f0d9c0fd92ad70.js"></script>
 </li>
 </ul>
 
@@ -354,8 +365,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/31/Pycharm使用注意/" rel="next" title="Pycharm使用">
-                <i class="fa fa-chevron-left"></i> Pycharm使用
+              <a href="/2019/02/11/requests上传图片/" rel="next" title="requests上传图片">
+                <i class="fa fa-chevron-left"></i> requests上传图片
               </a>
             
           </div>
@@ -363,10 +374,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/07/虚拟环境下使用wxpython/" rel="prev" title="Mac虚拟环境下使用wxpython">
-                Mac虚拟环境下使用wxpython <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -507,7 +514,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips"><span class="nav-number">1.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方案"><span class="nav-number">2.</span> <span class="nav-text">方案</span></a></li></ol></div>
             
 
           </div>
