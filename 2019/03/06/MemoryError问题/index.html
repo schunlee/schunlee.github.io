@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://i.imgur.com/hG8HMVp.png)">
 <meta property="og:image" content="https://i.imgur.com/iQq9qbO.png)">
 <meta property="og:image" content="https://i.imgur.com/BsbeB9R.png)">
-<meta property="og:updated_time" content="2019-03-06T05:40:44.667Z">
+<meta property="og:updated_time" content="2019-03-07T00:34:27.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MemoryError问题">
 <meta name="twitter:description" content="问题由于跑脚本的GCE VM instance低配的g1-small，内存只有1.7GB，定时任务总是由于MemoryError被Kill掉   Error:   方案 添加虚拟内存 参考 Linux下如何添加虚拟内存  fdisk -l和df -Th命令来查看硬盘信息和挂载信息，来确定分区的大小    使用dd命令，来创建大小为2G的文件swapfile dd if=/dev/zero of=/">
@@ -347,6 +347,11 @@
 <li><p>命令行释放内存</p>
 <pre><code>echo 1 &gt; /proc/sys/vm/drop_caches
 </code></pre></li>
+</ul>
+<ul>
+<li><p>使用hcache</p>
+<p><a href="https://mp.weixin.qq.com/s/EkoqlElIp-CWVqabB13z_g" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/EkoqlElIp-CWVqabB13z_g</a></p>
+</li>
 </ul>
 
       
