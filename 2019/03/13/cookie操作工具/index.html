@@ -95,7 +95,7 @@
 <meta property="og:description" content="在写爬虫时不免需要分析请求cookie，需要排查必要鉴权键值。这里介绍个Chrome插件 -&amp;gt; EditThisCookie 可以通过block每队键值，找到关键比如itunes connect的cookie，myacinfo即为鉴权键值  p.s.通过插件新增myacinfo，已设双重验证itunes connect账号登陆仍然会遇到手机短信验证(待研究)，但是却可以直接访问app信息">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/hHSfETT.png)">
-<meta property="og:updated_time" content="2019-03-13T06:18:46.821Z">
+<meta property="og:updated_time" content="2019-03-13T06:31:02.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cookie操作工具">
 <meta name="twitter:description" content="在写爬虫时不免需要分析请求cookie，需要排查必要鉴权键值。这里介绍个Chrome插件 -&amp;gt; EditThisCookie 可以通过block每队键值，找到关键比如itunes connect的cookie，myacinfo即为鉴权键值  p.s.通过插件新增myacinfo，已设双重验证itunes connect账号登陆仍然会遇到手机短信验证(待研究)，但是却可以直接访问app信息">
@@ -314,7 +314,8 @@
 <p>可以通过block每队键值，找到关键<br>比如itunes connect的cookie，myacinfo即为鉴权键值</p>
 <p><a href="https://i.imgur.com/hHSfETT.png)" target="_blank" rel="noopener"><img src="https://i.imgur.com/hHSfETT.png)"></a></p>
 <p>p.s.通过插件新增myacinfo，已设双重验证itunes connect账号登陆仍然会遇到手机短信验证(待研究)，但是却可以直接访问app信息 <a href="https://appstoreconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/app" target="_blank" rel="noopener">url</a> 。</p>
-</li>
+<pre><code>之前有做开发itunes connect账号通过requests协议方式登陆取值，某天某账号被设为two-factor-auth(hsa2)方式，https://idmsa.apple.com/appleauth/auth/signin请求返回HTTP 409，所获取的cookie键值相较普通用户，刚好缺失myacinfo。
+</code></pre></li>
 </ul>
 <ul>
 <li>有的网站会通过javascript动态修改cookie，可借助工具 <a href="https://github.com/paulirish/break-on-access" target="_blank" rel="noopener">break-on-access</a>，自动在js修改cookie时debugger暂停。</li>
